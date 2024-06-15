@@ -278,14 +278,14 @@ fi
 Open a new BASH window for the changes to take effect
 
 ### Check Git branch name on BASH prompt
-To validate this go to a git repository such as
+To validate this, go to a git repository such as
 ```bash
 cd ~/git/llm-zoomcamp
 ```
 Verify that the selected branch appears in the prompt automatically, most likely the `main` branch
 
-### Delete .bashrc backup if main shows up
-
+### Delete `.bashrc` backup
+If everything went well, delete the backup file (or not)
 ```bash
 rm ~/.bashrc.bak
 ```
