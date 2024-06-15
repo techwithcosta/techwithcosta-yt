@@ -386,7 +386,7 @@ code ~/git/llm-zoomcamp
 - We don't need to do anything else here
 - Close the welcome page
 
-### Time to explore VS Code
+### Time to explore VS Code (optional)
 ### Check `Explorer` panel
 Here you can find all files and folders that exist within the directory you are currently working at
 
@@ -446,18 +446,15 @@ code ~/git/llm-zoomcamp-2024
 - `Commit`
 - `Sync Changes` to push to remote repository, `OK`
 - Check repo on GitHub to see change
-
-
-Check zsh cross on terminal and source control panel, could commit from here. Discard changes
-
-### Check `Git` tab on bottom left corner
-
-
+- `Would you like Visual Studio Code to periodically run "git fetch"?`No, I like to pull the code manually
+- Can do this via terminal `git pull` or on bottom left corner with "cycle" symbol
+- Edit `README.md` file again, refresh terminal, check cross on OhMyZsh prompt, indicating there are changes
 
 ## Setup VS Code For Python on WSL With Miniconda
 https://engineeringfordatascience.com/posts/install_miniconda_from_the_command_line/
 
 ### Install latest version of Miniconda
+- Run the following to install Miniconda
 ```bash
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
@@ -466,27 +463,44 @@ rm -rf ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init bash
 ~/miniconda3/bin/conda init zsh
 ```
+- Refresh terminal
+- It will be stored on the `~/miniconda3` folder, containing the `envs` we create in the future
 
-### Prevent conda from activating the base env by default
+### Default env activation
+- `(base)` appears now behind the prompt, indicating that the "base" conda env is activated
+- I don't like this, so to prevent conda from activating the base env by default run the following
 ```bash
 conda config --set auto_activate_base false
 ```
+- Refresh the terminal, it does not activate anymore
 
 ### Create conda environment
-Create conda env for project where "llm-zoomcamp-2024-env" is my env name. I like to use the project folder name + "-env". Change the Python version if needed. If you omit "python=3.10", an new env is created but without Python installed and you would need to install it manually.
+- Create conda env for project named `llm-zoomcamp-2024-env`
 ```bash
 conda create -n llm-zoomcamp-2024-env python=3.10
 ```
+- I like to use the project folder name + `-env`
+- Change the Python version if needed
+- If you omit "python=3.10", a new env will be created but without Python and you would need to install it manually
 
-### Activate conda environment
+### Conda environments interaction
+You can activate specific environments with
 ```bash
 conda activate llm-zoomcamp-2024-env
 ```
+Deactivate the current env
+```bash
+conda deactivate
+```
+List envs (if one is activated, will show asterisk on it)
+```bash
+conda env list
+```
 
 ### Open project on VS Code
-Open VS Code from project folder using
+Open VS Code from project folder by running
 ```bash
-code .
+code ~/git/llm-zoomcamp-2024
 ```
 
 ### Create and save Python file
@@ -494,17 +508,21 @@ code .
 code main.py
 ```
 
-### Additional extension
+### Install extension
 `Python` by Microsoft
 
 ### Associate correct Python interpreter on VS Code
-Click the Python interpreter tab on bottom right corner or CTRL + SHIFT + P and search "interpreter", "Python: Select Interpreter".
-Choose the env you've just created.
-Refresh terminals inside VS Code.
-From now on whenever you open the project with VS Code, this conda env will be activated in the terminal, and the interpreter correctly selected.
-Whenever we install packages via the terminal, ensuring the correct env is activated, the packaged will be isolated into it, avoiding corruption of other projects.
+- Click the Python interpreter tab on bottom right corner or `CTRL + SHIFT + P` and search for "Python: Select Interpreter"
+- Choose the env you've just created
+- Refresh terminals inside VS Code
+- From now on whenever you open the project with VS Code, this conda env will be activated in the terminal, and the interpreter correctly selected
+- Whenever we install packages via the terminal, ensuring the correct env is activated, the packages will be isolated into it, avoiding corruption of other projects
+- Restart VS Code and validate activated env + selected interpreter
+- You might need to do this a couple of times to save the setup
 
-### Restart VS Code and validate activated env + selected interpreter
+### Python manager workflow
+- For each project I have within the `git` folder that require Python, I create a specific conda env for each one, to ensure package isolation
+- Then I associate each VS Code instance to each project / conda env / interpreter
 
 ### Python examples
 - script.py with print('hello world'), execute using UI play and terminal
