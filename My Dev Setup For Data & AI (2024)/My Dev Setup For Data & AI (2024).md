@@ -5,6 +5,8 @@
 - Make my life easier when I need to setup a new machine
 - Make others' lives easier by providing all steps
 - This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence`, `Computer Science`, `Software Engineering`, etc.
+- I think this gives a pretty nice overview of a possible local dev setup, and how different tools work together, with an engineering perspective
+- Of course this can be automated in the future, with Shell scripting, devcontainer (Docker), etc. But honestly I'm still exploring a bunch of different tech stacks
 - Depending on your needs, just install what you need from here, and complete it with additional things you might need, in any case, this should cover the basics for automation (`Python`), database interaction (`PostgreSQL`), containerization (`Docker`) which enable you to install pretty much everything (the `Mage` orchestrator, etc.)
 - I've used this setup to finish the `Data Engineering Zoomcamp` free course by `DataTalksClub`
 - I will be using this same setup to go through the `LLM Zoomcamp` free course by `DataTalksClub`
@@ -376,25 +378,47 @@ code ~/git/llm-zoomcamp
 ```
 - A remote connection to Linux distribution will be created after the automatic setup of VS Code Server
 - This means we will be working on Linux Ubuntu, with VS Code installed on Windows, in a seamless way, leveraging both OSs
+- Trust the authors
 
-### Show WSL tab
+### Check `WSL` tab
+- On bottom left corner, find the WSL tab, left click to see several options
+- Since we've launched WSL directly from the folder on Ubuntu, the remote connection is established automatically
+- We don't need to do anything else here
+- Close the welcome page
 
-### Show git / GitHub tab + Source Control panel
-Edit readme and save.
-Check zsh cross on terminal and source control panel, could commit from here. Discard changes.
+### Time to explore VS Code
+### Check `Explorer` panel
+Here you can find all files and folders that exist within the directory you are currently working at
 
-### Additional extensions
-- Code Spell Checker by Street Side Software
-- `Todo Tree` by Gruntfuggly
+### Open a file
+- Open the `README.md`, one click opens a temporary tab, two clicks opens a fixed tab
+- Press `CTRL + SHIFT + P`, select `Markdown: Open Preview to the Size`
+- Now you see the markdown code on the left, and the rendered result on the right, the scroll is synchronized
 
-### Show Explorer panel
-### Open README.md and CTRL + SHIFT + P, search for "markdown preview to the side"
+### Check `Search` panel
+Enables you to search through all folders and files, even with regular expressions
 
-### Show Search
+### Check `Run and Debug` panel
+Super useful functionality, to debug any type of code in an interactive way
 
-### Show Run and Debug panel
+### Check `Extensions` panel
+- Install `Code Spell Checker` by Street Side Software, for spelling suggestions, right click -> "Spelling Suggestions..."
+- Install `Todo Tree` by Gruntfuggly, write "TODO" as a coding language comment to group all your TODOs in the `TODOs` panel
+- There are a ton of extensions to explore
+
+
+
 
 ### Open new terminals BASH and ZSH and TMUX
+
+
+### Check `Source Control` panel
+- Since the current work folder is a Git repository, the Source Control panel will show you file changes and enable you to add, commit and push changes directly to the remote repository
+- It even shows the differences for edited files
+Edit readme and save.
+Check zsh cross on terminal and source control panel, could commit from here. Discard changes.
+### Check `Git` tab on bottom left corner
+
 
 
 ## Setup VS Code For Python on WSL With Miniconda
