@@ -404,13 +404,20 @@ Super useful functionality, to debug any type of code in an interactive way
 ### Check `Extensions` panel
 - Install `Code Spell Checker` by Street Side Software, for spelling suggestions, right click -> "Spelling Suggestions..."
 - Install `Todo Tree` by Gruntfuggly, write "TODO" as a coding language comment to group all your TODOs in the `TODOs` panel
-- There are a ton of extensions to explore
+- There are a ton of extensions to explore, for pretty much everything you can imagine
 
+### Check `Remote Explorer` panel
+- Shows the WSL targets, in this case Ubuntu, where we are connected to
 
-
-
-### Open new terminals BASH and ZSH and TMUX
-
+### Open new terminal
+- `Terminal` -> `New Terminal`
+- Or with shortcut, on my Portuguese keyboard is `CTRL + SHIFT + ç` (cedilla)
+- `CTRL + ç` closes and opens the current terminal
+- All shortcuts are customizable on `File` -> `Preferences` -> `Keyboard Shortcuts`
+- By default ZSH opens
+- Can open multiple terminals, BASH, etc.
+- Even multiplexers such as TMUX, to split one terminal windows into many more
+- This provides direct interaction with the WSL distribution directly from within VS Code
 
 ### Check `Source Control` panel
 - Since the current work folder is a Git repository, the Source Control panel will show you file changes and enable you to add, commit and push changes directly to the remote repository
