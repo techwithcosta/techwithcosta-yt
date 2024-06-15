@@ -196,13 +196,20 @@ mkdir ~/git
 ```
 
 ### Clone original course repo
-- From this point forward, the process applies to pretty much any coding project you might be following or creating yourself
+- From this point forward, the process applies to pretty much any coding project you might be following, or creating yourself
 - I will exemplify it using the new `LLM Zoomcamp` free course by `DataTalksClub`
 - Run the following to clone the original course repository into the `git` folder
 - If your folder has a different name, replace it
 ```bash
 cd ~/git
 git clone git@github.com:DataTalksClub/llm-zoomcamp.git
+```
+- I do this to have easy local access to the course materials
+- I just run the following each time I start working, to ensure my local branch is up to date
+```bash
+cd ~/git/llm-zoomcamp
+git fetch
+git pull
 ```
 
 ### Create and clone your course repo
