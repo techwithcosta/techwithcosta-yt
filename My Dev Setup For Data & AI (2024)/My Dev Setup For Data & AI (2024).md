@@ -362,10 +362,20 @@ Explore WSL, Git + GitHub setup, Python, Docker etc.
 ### Install WSL extension
 - It should pop up automatically
 - If not, go to extensions panel and find it: `WSL` by Microsoft
-- Show installed extension
 
-### Close VS Code and open it from Linux terminal using "code ." on original repo folder
-Remote connection to Linux distro will be created automatically by downloading VS Code Server
+### Open VS Code from WSL
+- Close VS Code
+- Go to a project folder on Linux terminal
+- Execute the following from that folder
+```bash
+code .
+```
+- Or
+```bash
+code ~/git/llm-zoomcamp
+```
+- A remote connection to Linux distribution will be created after the automatic setup of VS Code Server
+- This means we will be working on Linux Ubuntu, with VS Code installed on Windows, in a seamless way, leveraging both OSs
 
 ### Show WSL tab
 
