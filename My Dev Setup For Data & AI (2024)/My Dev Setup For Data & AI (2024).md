@@ -416,7 +416,7 @@ Super useful functionality, to debug any type of code in an interactive way
 - All shortcuts are customizable on `File` -> `Preferences` -> `Keyboard Shortcuts`
 - By default ZSH opens
 - Can open multiple terminals, BASH, etc.
-- Even multiplexers such as TMUX, to split one terminal windows into many more
+- Even multiplexers such as Tmux, to split one terminal windows into many more
 - This provides direct interaction with the WSL distribution directly from within VS Code
 
 ### Check `Source Control` panel
