@@ -1,6 +1,7 @@
 # My Dev Setup For Data & AI (2024)
 
 TODO: add images
+TODO: check old videos and notes
 
 ## Purpose
 - To share my current developer setup with others
