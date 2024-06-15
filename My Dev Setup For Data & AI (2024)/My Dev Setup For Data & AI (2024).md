@@ -7,7 +7,7 @@
 - This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence`, `Computer Science`, `Software Engineering`, etc.
 - Depending on your needs, just install what you need from here, and complete it with additional things you might need, in any case, this should cover the basics for automation (`Python`), database interaction (`PostgreSQL`), containerization (`Docker`) which enable you to install pretty much everything (the `Mage` orchestrator, etc.)
 - I've used this setup to finish the `Data Engineering Zoomcamp` free course by `DataTalksClub`
-- I will be using this same setup to go through the ` LLM Zoomcamp` free course by `DataTalksClub`
+- I will be using this same setup to go through the `LLM Zoomcamp` free course by `DataTalksClub`
 - This file will be dynamic, as my current needs change 
 
 ## Summary
@@ -190,15 +190,18 @@ cat ~/.gitconfig
 
 ### Create folder for projects on user's home directory "git"
 - This folder will contain all your projects, name it `git`, `projects`, `code` or whatever
-- I call it `git`
+- I call mine `git`
 ```bash
 mkdir ~/git
 ```
 
 ### Clone original course repo
-inside "git" folder
+- From this point forward, the process applies to pretty much any coding project you might be following or creating yourself
+- I will exemplify it using the new `LLM Zoomcamp` free course by `DataTalksClub`
+- Run the following to clone the original course repository into the `git` folder
+- If your folder has a different name, replace it
 ```bash
-git clone git@github.com:DataTalksClub/llm-zoomcamp.git
+git clone git@github.com:DataTalksClub/llm-zoomcamp.git ~/git
 ```
 
 ### Create and clone your course repo
