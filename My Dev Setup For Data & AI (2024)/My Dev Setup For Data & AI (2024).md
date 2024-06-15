@@ -1,5 +1,15 @@
 # My Dev Setup For Data & AI (2024)
 
+## Purpose
+- To share my current developer setup with others
+- Make my life easier when I need to setup a new machine
+- Make others' lives easier by providing all steps
+- This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence`, `Computer Science`, `Software Engineering`, etc.
+- Depending on your needs, just install what you need from here, and complete it with additional things you might need, in any case, this should cover the basics for automation (`Python`), database interaction (`PostgreSQL`), containerization (`Docker`) which enable you to install pretty much everything (the `Mage` orchestrator, etc.)
+- I've used this setup to finish the `Data Engineering Zoomcamp` free course by `DataTalksClub`
+- I will be using this same setup to go through the ` LLM Zoomcamp` free course by `DataTalksClub`
+- This file will be dynamic, as my current needs change 
+
 ## Summary
 - **Main Operating System (OS):** Windows 11 (applicable to Windows 10)
 - **Secondary OS:** Linux Ubuntu via Windows Subsystem for Linux (WSL)
@@ -179,8 +189,10 @@ cat ~/.gitconfig
 ```
 
 ### Create folder for projects on user's home directory "git"
+- This folder will contain all your projects, name it `git`, `projects`, `code` or whatever
+- I call it `git`
 ```bash
-mkdir git
+mkdir ~/git
 ```
 
 ### Clone original course repo
