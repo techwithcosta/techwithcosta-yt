@@ -79,54 +79,81 @@ Basic Linux Commands for Beginners
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 ### Install Git
-Git should be installed by default, if not, run
+Git should be installed by default, run to check
+```bash
+git
+```
+
+If not installed
+```bash
 sudo apt install git
+```
 
 ### Generate SSH key
 Use same email as GitHub account
+```bash
 ssh-keygen -t ed25519 -C "techwithcosta@gmail.com"
+```
 Do add passphrase, easy to remember
 
 ### Create GitHub account if you don't have one yet
 
 ### Add the public SSH key to GitHub account
 check .ssh folder, .pub file
+```bash
 cat id_ed25519.pub
+```
 
 ### Test SSH connection to GitHub
+```bash
 ssh -T git@github.com
+```
+
 confirm GitHub key fingerprint with website
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/githubs-ssh-key-fingerprints
 
 ### Confirm keys from known hosts
+```bash
 cat known_hosts
+```
 
 ### Remove old known hosts file
+```bash
 rm known_hosts.old
+```
 
 ### Configure Git with your identity
+```bash
 git config --global user.name "Diogo Costa"
 git config --global user.email techwithcosta@gmail.com
+```
 Check ".gitconfig" File
 
 ### Create folder for projects on user's home directory "git"
+```bash
 mkdir git
+```
 
 ### Clone original course repo
 inside "git" folder
+```bash
 git clone git@github.com:DataTalksClub/llm-zoomcamp.git
+```
 
 ### Create and clone your course repo
 inside "git" folder
+```bash
 git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
-
+```
 
 ## Setup Linux Terminals
 https://tinyurl.com/techwithcosta-yt-010
 https://tinyurl.com/techwithcosta-yt-011
 
 ### Backup .bashrc file
+```bash
 cp .bashrc .bashrc.bak
+```
 
 ### Remove prompt config rows from .bashrc file
 
