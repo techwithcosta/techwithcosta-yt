@@ -249,6 +249,10 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 ```
+- **NOTE:** Do not delete the following row
+```bash
+unset color_prompt force_color_prompt
+```
 - Delete them by pressing `CTRL + K` after positioning the cursor on each of them, using the keyboard arrows
 - Add the following rows to replace them
 ```bash
