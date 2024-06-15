@@ -204,6 +204,7 @@ mkdir ~/git
 cd ~/git
 git clone git@github.com:DataTalksClub/llm-zoomcamp.git
 ```
+- Enter your passphrase (we will automate this further ahead)
 - I do this to have easy local access to the course materials
 - I just run the following each time I start working, to ensure my local branch is up to date
 ```bash
@@ -225,14 +226,13 @@ git pull
 cd ~/git
 git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 ```
+- Enter your passphrase (we will automate this further ahead)
 
 ## Setup Linux Terminals
-https://tinyurl.com/techwithcosta-yt-010
-https://tinyurl.com/techwithcosta-yt-011
 
 ### Backup .bashrc file
 ```bash
-cp .bashrc .bashrc.bak
+cp ~/.bashrc ~/.bashrc.bak
 ```
 
 ### Remove prompt config rows from .bashrc file
@@ -267,7 +267,7 @@ fi
 ### Delete .bashrc backup if main shows up
 
 ```bash
-rm .bashrc.bak
+rm ~/.bashrc.bak
 ```
 
 ### Install zsh
