@@ -267,15 +267,22 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 ```
+- Save the file by pressing `CTRL + X`, then hit `Y` and then `ENTER`
 - The `PS1` variable defines what appears in the terminal prompt, using ANSI codes for colors, etc.
-- We use the function `parse_git_branch` and a regular expression to get the currently activated branch whenever we are in a `.git` folder
+- We use the function `parse_git_branch` and a regular expression to get the activated branch whenever we are in a `.git` folder
 - Concatenation is used to include the branch name into the prompt
 - This is super useful for Git + GitHub workflows, if you prefer BASH
 - I mostly use ZSH, which has a lot of customization frameworks with themes, colors, extra functionalities, such as `OhMyZsh`, `OhMyPosh`, `Powerlevel10k`, `Starship`, etc.
 
-### Refresh bash
+### Refresh BASH
+Open a new BASH window for the changes to take effect
 
-### Check main branch on original course repo folder
+### Check Git branch name on BASH prompt
+To validate this go to a git repository such as
+```bash
+cd ~/git/llm-zoomcamp
+```
+Verify that the selected branch appears in the prompt automatically, most likely the `main` branch
 
 ### Delete .bashrc backup if main shows up
 
