@@ -24,7 +24,7 @@ Windows 11 or Windows 10
 
 
 ### Hardware virtualization
-Enabled (check on Task Manager -> Performance -> Virtualisation: Enabled)
+Enabled (check on Task Manager -> Performance -> Virtualization: Enabled)
 If it's not, I suggest enabling it on BIOS (on your CPU options enable Intel VT-x or AMD-V)
 (not sure if this is mandatory, but I always do this to ensure I can create virtual machines
 it might have some performance impact on your WSL2 setup, just in case, enable it if you can)
@@ -38,14 +38,20 @@ Enable both:
 
 ### Install / Update WSL
 Using Command Prompt (CMD) run several times
+```bash
 wsl --update
+```
 until the last version is installed
 
 ### Check available Linux distros
+```bash
 wsl --list --online
+```
 
 ### Choose and install Linux distro
+```bash
 wsl --install -d Ubuntu-22.04
+```
 
 ### Define UNIX username
 
@@ -58,9 +64,10 @@ From Microsoft Store install the official Terminal app by Microsoft Corporation,
 Make Linux distro the default terminal on Terminal app
 
 ### Upgrade and Update Linux distro
+```bash
 sudo apt update
 sudo apt upgrade
-
+```
 
 ## Review Linux Commands
 Basic Linux Commands for Beginners
