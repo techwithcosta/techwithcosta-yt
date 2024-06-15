@@ -153,11 +153,9 @@ ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEmKSENj
 ```
 - If everything matches perfectly, move forward
 
-
-
 ### Remove old known hosts file
 ```bash
-rm known_hosts.old
+rm ~/.ssh/known_hosts.old
 ```
 
 ### Configure Git with your identity
