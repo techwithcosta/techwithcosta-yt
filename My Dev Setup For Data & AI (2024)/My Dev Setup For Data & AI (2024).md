@@ -198,7 +198,7 @@ mkdir ~/git
 ### Clone original course repo
 - From this point forward, the process applies to pretty much any coding project you might be following, or creating yourself
 - I will exemplify it using the new `LLM Zoomcamp` free course by `DataTalksClub`
-- Run the following to clone the original course repository into the `git` folder
+- Run something similar to the following to clone the original course repository into the `git` folder
 - If your folder has a different name, replace it
 ```bash
 cd ~/git
@@ -213,7 +213,14 @@ git pull
 ```
 
 ### Create and clone your course repo
-inside "git" folder
+- Go to your GitHub account
+- `Repositories` -> `New`
+- **Repository name =** *llm-zoomcamp-2024* **(or other)**
+- **Description =** *Course walkthrough: Large Language Models Zoomcamp 2024 (by DataTalksClub).* **(or other)**
+- **Public**, to share the repo with everyone, course community, for homework submission and portfolio
+- **Initialize this repository with: =** Enable *Add a README file*
+- `Create repository`
+- Clone the repository by running something similar to the following, replace with yours
 ```bash
 cd ~/git
 git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
