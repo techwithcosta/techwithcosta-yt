@@ -201,12 +201,14 @@ mkdir ~/git
 - Run the following to clone the original course repository into the `git` folder
 - If your folder has a different name, replace it
 ```bash
-git clone git@github.com:DataTalksClub/llm-zoomcamp.git ~/git
+cd ~/git
+git clone git@github.com:DataTalksClub/llm-zoomcamp.git
 ```
 
 ### Create and clone your course repo
 inside "git" folder
 ```bash
+cd ~/git
 git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 ```
 
