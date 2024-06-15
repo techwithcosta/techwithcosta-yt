@@ -1,5 +1,7 @@
 # My Dev Setup For Data & AI (2024)
 
+TODO: add images
+
 ## Purpose
 - To share my current developer setup with others
 - Make my life easier when I need to setup a new machine
