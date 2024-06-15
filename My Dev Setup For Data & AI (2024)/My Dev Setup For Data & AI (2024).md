@@ -230,13 +230,18 @@ git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 
 ## Setup Linux Terminals
 
-### Backup .bashrc file
+### Backup `.bashrc` file
 ```bash
 cp ~/.bashrc ~/.bashrc.bak
 ```
 
-### Remove prompt config rows from .bashrc file
-
+### Customize BASH prompt for Git
+- Let's customize the BASH prompt to include the git branch name on it each time we are in a `.git` folder
+- Run the following to edit the file
+```bash
+nano ~/.bashrc
+```
+- Use the `DOWN ARROW` or `PAGE DOWN` to find the following rows
 ```bash
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -244,9 +249,8 @@ else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
 ```
-
-### Add prompt config rows from .bashrc file
-
+- Delete them by pressing `CTRL + K` after positioning the cursor on each of them, using the keyboard arrows
+- Add the following rows to replace them
 ```bash
 # Add git branch to prompt
 parse_git_branch() {
@@ -259,6 +263,11 @@ else
  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 ```
+- The `PS1` variable defines what appears in the terminal prompt, using ANSI codes for colors, etc.
+- We use the function `parse_git_branch` and a regular expression to get the currently activated branch whenever we are in a `.git` folder
+- Concatenation is used to include the branch name into the prompt
+- This is super useful for Git + GitHub workflows, if you prefer BASH
+- I mostly use ZSH, which has a lot of customization frameworks with themes, colors, extra functionalities, such as `OhMyZsh`, `OhMyPosh`, `Powerlevel10k`, `Starship`, etc.
 
 ### Refresh bash
 
