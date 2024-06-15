@@ -348,8 +348,8 @@ ssh -T git@github.com
 https://code.visualstudio.com/download
 
 ### Install VS Code
-Activate all ticks except desktop icon
-Pin to taskbar
+- Activate all ticks except desktop icon
+- Pin to taskbar
 
 ### Follow the welcome steps if you want and read docs to learn more about VS Code functionalities
 https://code.visualstudio.com/docs
@@ -360,9 +360,9 @@ https://code.visualstudio.com/docs/containers/overview
 Explore WSL, Git + GitHub setup, Python, Docker etc.
 
 ### Install WSL extension
-It should pop up automatically
-If not, go to extensions panel and find it
-Show installed extension
+- It should pop up automatically
+- If not, go to extensions panel and find it: `WSL` by Microsoft
+- Show installed extension
 
 ### Close VS Code and open it from Linux terminal using "code ." on original repo folder
 Remote connection to Linux distro will be created automatically by downloading VS Code Server
@@ -375,7 +375,7 @@ Check zsh cross on terminal and source control panel, could commit from here. Di
 
 ### Additional extensions
 - Code Spell Checker by Street Side Software
-- Todo Tree by Gruntfuggly
+- `Todo Tree` by Gruntfuggly
 
 ### Show Explorer panel
 ### Open README.md and CTRL + SHIFT + P, search for "markdown preview to the side"
@@ -428,7 +428,7 @@ code main.py
 ```
 
 ### Additional extension
-Python by Microsoft
+`Python` by Microsoft
 
 ### Associate correct Python interpreter on VS Code
 Click the Python interpreter tab on bottom right corner or CTRL + SHIFT + P and search "interpreter", "Python: Select Interpreter".
@@ -443,7 +443,7 @@ Whenever we install packages via the terminal, ensuring the correct env is activ
 - script.py with print('hello world'), execute using UI play and terminal
 
 ### Additional extension
-Jupyter by Microsoft
+`Jupyter` by Microsoft
 
 ### Python examples
 - cells.py with #%%, execute cell using UI, CTRL + ENTER or SHIFT + ENTER, install ipykernel package, show interactive window, jupyter tab
@@ -579,7 +579,7 @@ Check empty list of tables inside DB
 ```bash
 \dt
 ```
-Quit by pressing "q"
+Quit by pressing `q`
 
 ### Connect to PostgreSQL via pgAdmin
 
@@ -732,7 +732,7 @@ resource "docker_container" "nginx" {
 }
 ```
 
-Install extension on VS Code: HashiCorp Terraform by HashiCorp. Now the file gets highlighted.
+Install extension on VS Code: `HashiCorp Terraform` by HashiCorp. Now the file gets highlighted.
 
 Initialize the project, which downloads a plugin called a provider that lets Terraform interact with Docker.
 
