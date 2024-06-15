@@ -79,22 +79,28 @@ Basic Linux Commands for Beginners
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 ### Install Git
-Git should be installed by default, run to check
+Git should be installed by default, run the following to check
 ```bash
 git
 ```
-
 If not installed
 ```bash
 sudo apt install git
 ```
 
 ### Generate SSH key
-Use same email as GitHub account
+- Use same email as GitHub account
+- Replace the following command with your email and run it
 ```bash
 ssh-keygen -t ed25519 -C "techwithcosta@gmail.com"
 ```
-Empty filename, just press `ENTER`. Add a passphrase easy to remember, you will type it often. A `.ssh` folder is created in the user's home directory. Run `la` to see it.
+- Empty filename, just press `ENTER`
+- Add a passphrase easy to remember, you will type it often
+- The `~/.ssh` folder is created
+- Run the following to see it
+```bash
+la ~/.ssh
+```
 
 ### Create GitHub account if you don't have one yet
 
@@ -132,7 +138,7 @@ SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
 
 
 ### Confirm keys from known hosts
-- Two files have been created inside `.ssh` folder `known_hosts` and `known_hosts.old`
+- Two files have been created inside `~/.ssh` folder `known_hosts` and `known_hosts.old`
 - Run the following to check the contents of `known_hosts`
 ```bash
 cat ~/.ssh/known_hosts
@@ -159,11 +165,18 @@ rm ~/.ssh/known_hosts.old
 ```
 
 ### Configure Git with your identity
+- Run the following to specify who is going to sign your commits with a user name and email
+- I use my first and surnames and the same email address as the GitHub account
+- Replace with yours
 ```bash
 git config --global user.name "Diogo Costa"
 git config --global user.email techwithcosta@gmail.com
 ```
-Check ".gitconfig" File
+- The `~/.gitconfig` is created
+- Run the following to confirm your identity has been added
+```bash
+cat ~/.gitconfig
+```
 
 ### Create folder for projects on user's home directory "git"
 ```bash
