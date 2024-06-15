@@ -1,6 +1,4 @@
-# My Dev Setup for AI, Data, CS in 2024
-# My Dev Setup for AI, Data, CS in 2024 (Windows + Linux)
-# My Dev Setup for AI, LLMs & Data
+# My Dev Setup For Data & AI (2024)
 
 ## Summary
 - **Main Operating System (OS):** Windows 11 (applicable to Windows 10)
