@@ -393,6 +393,7 @@ Here you can find all files and folders that exist within the directory you are 
 ### Open a file
 - Open the `README.md`, one click opens a temporary tab, two clicks opens a fixed tab
 - Press `CTRL + SHIFT + P`, select `Markdown: Open Preview to the Size`
+- You can achieve the same thing with `CTRL + K` (notice the message in the bottom tab) and then `V`
 - Now you see the markdown code on the left, and the rendered result on the right, the scroll is synchronized
 
 ### Check `Search` panel
@@ -419,11 +420,36 @@ Super useful functionality, to debug any type of code in an interactive way
 - Even multiplexers such as Tmux, to split one terminal windows into many more
 - This provides direct interaction with the WSL distribution directly from within VS Code
 
+### Check `Git + GitHub` tab
+- On bottom left corner, we have direct access to branches options
+- We can create and switch between branches, and the repository updates automatically in the Explorer panel
+- Search for Git on `CTRL + SHIFT + P` to see options
+- You can choose to interact with Git via UI, or via integrated terminals in the bottom
+
 ### Check `Source Control` panel
-- Since the current work folder is a Git repository, the Source Control panel will show you file changes and enable you to add, commit and push changes directly to the remote repository
+- For this, switch to my course repository
+```bash
+code ~/git/llm-zoomcamp-2024 
+```
+- Since the current work folder is also a Git repository, the Source Control panel will show file changes and enable you to add, commit and push changes directly to the remote repository
 - It even shows the differences for edited files
-Edit readme and save.
-Check zsh cross on terminal and source control panel, could commit from here. Discard changes.
+- Open a ZSH within VS Code with `CTRL + ç`
+- Edit the `README.md` file
+- Notice the white circle on the tab name, showing that the file has been edited but not saved
+- Save the file with `CTRL + S`
+- Notice the yellow names on tab and `Explorer` panel, and the `M` in front of the filename, standing for `Modified`
+- Open `Source Control` panel see that `README.md` file has been changed
+- Click on it
+- Green shows a new added line, red would be removed, etc.
+- Click on `+` to stage changes
+- Write a commit message
+- `Commit`
+- `Sync Changes` to push to remote repository, `OK`
+- Check repo on GitHub to see change
+
+
+Check zsh cross on terminal and source control panel, could commit from here. Discard changes
+
 ### Check `Git` tab on bottom left corner
 
 
