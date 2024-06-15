@@ -291,22 +291,20 @@ rm ~/.bashrc.bak
 ```
 
 ### Install zsh
-
 ```bash
 sudo apt install zsh
 ```
 
 ### Install OhMyZsh
-
 ```bash
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
-make zsh default shell
+I like to have ZSH as my default shell, so I choose `Y` when prompted
 
-### Automate SSH-Agent passphrases for both bash and zsh
+### Automate SSH-Agent passphrases for both BASH and ZSH
 
-paste following code on both .bashrc and .zshrc files
-
+- Append the following code to the bottom of both `.bashrc` and `.zshrc` files
+- This way you only have to enter your passphrase once, per terminal, per computer start up
 ```bash
 # Auto-lauching ssh-agent
 env=~/.ssh/agent.env
@@ -331,10 +329,15 @@ fi
 
 unset env
 ```
-
-### Validate that terminal only asks for passphrase once by refreshing terminal 2 times
-
-Test SSH connection to GitHub
+Use the following commands
+```bash
+nano ~/.bashrc
+```
+```bash
+nano ~/.zshrc
+```
+- Open multiple BASH and ZSH windows to validate
+- Test SSH connection to GitHub
 ```bash
 ssh -T git@github.com
 ```
