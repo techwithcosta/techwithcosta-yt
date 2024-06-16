@@ -27,6 +27,8 @@ TODO: check old videos and notes
 
 
 ## Setup Windows Subsystem for Linux (WSL)
+- Additional video: **Install Windows Subsystem for Linux (WSL)**
+- https://www.youtube.com/watch?v=gTf32sX9ci0
 
 ### Useful references
 https://learn.microsoft.com/en-us/windows/wsl/install-manual
@@ -93,11 +95,23 @@ sudo apt update
 sudo apt upgrade
 ```
 
+### Open Windows file explorer
+From Linux terminal, run the following command to open Windows file explorer in the current Linux directory
+```bash
+explorer.exe .
+```
+
 ## Review Linux Commands
-Basic Linux Commands for Beginners
+- Additional video
+- [Basic Linux Commands for Beginners](https://www.youtube.com/watch?v=V_G2_uCE8ug)
 
 
 ## Setup Git and GitHub with SSH
+- Additional videos
+- [Introduction to Git and GitHub](https://www.youtube.com/watch?v=S6QcRUjpQgk)
+- [Setup SSH for GitHub Workflows](https://www.youtube.com/watch?v=4dixKFaZYb4)
+- [Automate GitHub SSH Passphrases](https://www.youtube.com/watch?v=82YMmafbPTQ)
+- [Basics of Git and GitHub](https://www.youtube.com/watch?v=zV0Q-gcoBA0)
 
 ### Useful references
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
@@ -242,7 +256,15 @@ git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 ```
 - Enter your passphrase (we will automate this further ahead)
 
+### Git + GitHub workflow examples
+- Additional videos
+- [GitHub Workflow Examples (Part 1)](https://www.youtube.com/watch?v=67opvHhjkME)
+- [GitHub Workflow Examples (Part 2)](https://www.youtube.com/watch?v=m0Rc9YbunNw)
+
 ## Setup Linux Terminals
+- Additional videos
+- [Awesome BASH Trick (For Git Users)](https://www.youtube.com/watch?v=BdNcLYaU7wI)
+- [Improve Your Terminal (Easy Way)](https://www.youtube.com/watch?v=J-L2huPs9EM)
 
 ### Backup `.bashrc` file
 ```bash
@@ -692,6 +714,14 @@ docker run hello-world
 docker run -d -p 8080:80 docker/welcome-to-docker
 ```
 - Open browser and go to http://localhost:8080/
+- You could also run a Ubuntu container (run `exit` to quit)
+```bash
+docker run -it ubuntu
+```
+- Or even a Python container (run `exit()` to quit)
+```bash
+docker run -it python:3.10
+```
 - Stop all containers and delete all containers and images via UI (could be done via terminal)
 
 ## Setup Docker with PostgreSQL (database)
@@ -758,6 +788,14 @@ docker compose up
 - The terminal will be dedicated to these containers
 - Install extension on VS Code: `Docker` by Microsoft
 - You can interact with contained from VS Code directly (`Docker` panel)
+- Check running Docker containers
+```bash
+docker ps
+```
+- Check Docker networks
+```bash
+docker network ls
+```
 
 ### Setup `pgcli`
 - `pgcli` is a Python package, useful to interact with PostgreSQL DBs via terminal
