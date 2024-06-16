@@ -639,19 +639,22 @@ jupyter server list
 - Back in VS Code the same changes will appear
 
 ## Download and install Docker Desktop on Windows
-
-Run the following and confirm that Docker is not accessible
+- Run the following and confirm that Docker is not accessible
 ```bash
 docker
 ```
-
-https://www.docker.com/products/docker-desktop/
-
-- Use WSL2 instead of Hyper-V during setup
-- Run docker after installation
+- "Download for Windows" from https://www.docker.com/products/docker-desktop/
+- Start installation
+- If prompted, use WSL2 instead of Hyper-V during setup
+- Run Docker Desktop after installation
+- Accept "Docker Subscription Service Agreement"
 - Sign up and / or sign in
-- Check for updates
-- Update and restart PC
+- Open Docker Desktop
+- Skip survey, or not
+- Check for updates on bottom right corner
+- Download update
+- Save your stuff
+- Update and restart machine
 - Start Docker engine
 
 https://docs.docker.com/desktop/wsl/
