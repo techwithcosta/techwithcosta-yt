@@ -103,15 +103,19 @@ explorer.exe .
 
 ## Review Linux Commands
 - Additional video
-- [Basic Linux Commands for Beginners](https://www.youtube.com/watch?v=V_G2_uCE8ug)
-
+- [Basic Linux Commands for Beginners](https://www.youtube.com/watch?v=V_G2_uCE8ug)\
+[![Basic Linux Commands for Beginners](https://img.youtube.com/vi/V_G2_uCE8ug/0.jpg)](https://www.youtube.com/watch?v=V_G2_uCE8ug "Basic Linux Commands for Beginners")
 
 ## Setup Git and GitHub with SSH
 - Additional videos
-- [Introduction to Git and GitHub](https://www.youtube.com/watch?v=S6QcRUjpQgk)
-- [Setup SSH for GitHub Workflows](https://www.youtube.com/watch?v=4dixKFaZYb4)
-- [Automate GitHub SSH Passphrases](https://www.youtube.com/watch?v=82YMmafbPTQ)
-- [Basics of Git and GitHub](https://www.youtube.com/watch?v=zV0Q-gcoBA0)
+- [Introduction to Git and GitHub](https://www.youtube.com/watch?v=S6QcRUjpQgk)\
+[![Introduction to Git and GitHub](https://img.youtube.com/vi/S6QcRUjpQgk/0.jpg)](https://www.youtube.com/watch?v=S6QcRUjpQgk "Introduction to Git and GitHub")
+- [Setup SSH for GitHub Workflows](https://www.youtube.com/watch?v=4dixKFaZYb4)\
+[![Setup SSH for GitHub Workflows](https://img.youtube.com/vi/4dixKFaZYb4/0.jpg)](https://www.youtube.com/watch?v=4dixKFaZYb4 "Setup SSH for GitHub Workflows")
+- [Automate GitHub SSH Passphrases](https://www.youtube.com/watch?v=82YMmafbPTQ)\
+[![Automate GitHub SSH Passphrases](https://img.youtube.com/vi/82YMmafbPTQ/0.jpg)](https://www.youtube.com/watch?v=82YMmafbPTQ "Automate GitHub SSH Passphrases")
+- [Basics of Git and GitHub](https://www.youtube.com/watch?v=zV0Q-gcoBA0)\
+[![Basics of Git and GitHub](https://img.youtube.com/vi/zV0Q-gcoBA0/0.jpg)](https://www.youtube.com/watch?v=zV0Q-gcoBA0 "Basics of Git and GitHub")
 
 ### Useful references
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh
@@ -258,13 +262,17 @@ git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 
 ### Git + GitHub workflow examples
 - Additional videos
-- [GitHub Workflow Examples (Part 1)](https://www.youtube.com/watch?v=67opvHhjkME)
-- [GitHub Workflow Examples (Part 2)](https://www.youtube.com/watch?v=m0Rc9YbunNw)
+- [GitHub Workflow Examples (Part 1)](https://www.youtube.com/watch?v=67opvHhjkME)\
+[![GitHub Workflow Examples (Part 1)](https://img.youtube.com/vi/67opvHhjkME/0.jpg)](https://www.youtube.com/watch?v=67opvHhjkME "GitHub Workflow Examples (Part 1)")
+- [GitHub Workflow Examples (Part 2)](https://www.youtube.com/watch?v=m0Rc9YbunNw)\
+[![GitHub Workflow Examples (Part 2)](https://img.youtube.com/vi/m0Rc9YbunNw/0.jpg)](https://www.youtube.com/watch?v=m0Rc9YbunNw "GitHub Workflow Examples (Part 2)")
 
 ## Setup Linux Terminals
 - Additional videos
-- [Awesome BASH Trick (For Git Users)](https://www.youtube.com/watch?v=BdNcLYaU7wI)
-- [Improve Your Terminal (Easy Way)](https://www.youtube.com/watch?v=J-L2huPs9EM)
+- [Awesome BASH Trick (For Git Users)](https://www.youtube.com/watch?v=BdNcLYaU7wI)\
+[![Awesome BASH Trick (For Git Users)](https://img.youtube.com/vi/BdNcLYaU7wI/0.jpg)](https://www.youtube.com/watch?v=BdNcLYaU7wI "Awesome BASH Trick (For Git Users)")
+- [Improve Your Terminal (Easy Way)](https://www.youtube.com/watch?v=J-L2huPs9EM)\
+[![Improve Your Terminal (Easy Way)](https://img.youtube.com/vi/J-L2huPs9EM/0.jpg)](https://www.youtube.com/watch?v=J-L2huPs9EM "Improve Your Terminal (Easy Way)")
 
 ### Backup `.bashrc` file
 ```bash
