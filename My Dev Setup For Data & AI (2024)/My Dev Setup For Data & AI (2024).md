@@ -27,8 +27,9 @@ TODO: check old videos and notes
 
 
 ## Setup Windows Subsystem for Linux (WSL)
-- Additional video: **Install Windows Subsystem for Linux (WSL)**
-- https://www.youtube.com/watch?v=gTf32sX9ci0
+- Additional video
+- [Install Windows Subsystem for Linux (WSL)](https://www.youtube.com/watch?v=gTf32sX9ci0)\
+[![Install Windows Subsystem for Linux (WSL)](https://img.youtube.com/vi/gTf32sX9ci0/0.jpg)](https://www.youtube.com/watch?v=gTf32sX9ci0 "Install Windows Subsystem for Linux (WSL)")
 
 ### Useful references
 https://learn.microsoft.com/en-us/windows/wsl/install-manual
