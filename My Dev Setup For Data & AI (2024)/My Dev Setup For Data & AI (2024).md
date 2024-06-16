@@ -3,6 +3,22 @@
 TODO: add images
 TODO: check old videos and notes
 
+essentially, before starting the course, a beginner should understand the following (this course is not beginner friendly)
+- IT (setting up dev environments, infrastructure, VMs, software tools for coding, networks)
+- Command line, terminal, Linux
+- Git + GitHub
+- Python
+- SQL
+- IaC Terraform
+- Containerization (Docker)
+- Cloud
+
+de-zoomcamp linkedin posts + learnings
+de-zoomcamp course solutions (all homework assignments 100%)
+de-zoomcamp course leaderboard
+
+- LLM Zoomcamp
+
 ## Purpose
 - To share my current developer setup with others
 - Make my life easier when I need to setup a new machine
@@ -27,19 +43,17 @@ TODO: check old videos and notes
 
 
 ## Setup Windows Subsystem for Linux (WSL)
+
+![win_unix_wsl](./assets/win_unix_wsl.png)
+
 - Additional video
 - [Install Windows Subsystem for Linux (WSL)](https://www.youtube.com/watch?v=gTf32sX9ci0)\
 [![Install Windows Subsystem for Linux (WSL)](https://img.youtube.com/vi/gTf32sX9ci0/0.jpg)](https://www.youtube.com/watch?v=gTf32sX9ci0 "Install Windows Subsystem for Linux (WSL)")
 
-### Useful references
-https://learn.microsoft.com/en-us/windows/wsl/install-manual
-https://learn.microsoft.com/en-us/windows/terminal/install
-
 ### Operating system
 Windows 11 or Windows 10
 
-![Windows 11 or Windows 10](./assets/win10-win11-logos.png)
-
+![win10_or_win11](./assets/win10_or_win11.png)
 
 ### Hardware virtualization
 Enabled (check on Task Manager -> Performance -> Virtualization: Enabled)
@@ -66,6 +80,9 @@ wsl --list --online
 ```
 
 ### Choose and install Linux distro
+
+![ubuntu](./assets/ubuntu.png)
+
 ```bash
 wsl --install -d Ubuntu-22.04
 ```
@@ -85,6 +102,9 @@ wsl --unregister Ubuntu-22.04
 - Then go to "Add or remove programs", search for the distribution name and uninstall it
 
 ### Install terminal
+
+![terminal](./assets/terminal.png)
+
 From Microsoft Store install the official Terminal app by Microsoft Corporation, if you don't have it yet
 
 ### Default terminal
@@ -108,6 +128,9 @@ explorer.exe .
 [![Basic Linux Commands for Beginners](https://img.youtube.com/vi/V_G2_uCE8ug/0.jpg)](https://www.youtube.com/watch?v=V_G2_uCE8ug "Basic Linux Commands for Beginners")
 
 ## Setup Git and GitHub with SSH
+
+![git_github](./assets/git_github.png)
+
 - Additional videos
 - [Introduction to Git and GitHub](https://www.youtube.com/watch?v=S6QcRUjpQgk)\
 [![Introduction to Git and GitHub](https://img.youtube.com/vi/S6QcRUjpQgk/0.jpg)](https://www.youtube.com/watch?v=S6QcRUjpQgk "Introduction to Git and GitHub")
@@ -269,6 +292,9 @@ git clone git@github.com:techwithcosta/llm-zoomcamp-2024.git
 [![GitHub Workflow Examples (Part 2)](https://img.youtube.com/vi/m0Rc9YbunNw/0.jpg)](https://www.youtube.com/watch?v=m0Rc9YbunNw "GitHub Workflow Examples (Part 2)")
 
 ## Setup Linux Terminals
+
+![bash_zsh](./assets/bash_zsh.png)
+
 - Additional videos
 - [Awesome BASH Trick (For Git Users)](https://www.youtube.com/watch?v=BdNcLYaU7wI)\
 [![Awesome BASH Trick (For Git Users)](https://img.youtube.com/vi/BdNcLYaU7wI/0.jpg)](https://www.youtube.com/watch?v=BdNcLYaU7wI "Awesome BASH Trick (For Git Users)")
@@ -389,6 +415,8 @@ ssh -T git@github.com
 
 ## Setup VS Code With WSL (IDE)
 
+![vscode](./assets/vscode.png)
+
 ### Download Visual Studio Code (VS Code)
 https://code.visualstudio.com/download
 
@@ -397,12 +425,14 @@ https://code.visualstudio.com/download
 - Pin to taskbar
 
 ### Follow the welcome steps if you want and read docs to learn more about VS Code functionalities
-https://code.visualstudio.com/docs
-https://code.visualstudio.com/docs/remote/wsl
-https://code.visualstudio.com/docs/terminal/basics
-https://code.visualstudio.com/docs/python/python-quick-start
-https://code.visualstudio.com/docs/containers/overview
+- https://code.visualstudio.com/docs
+- https://code.visualstudio.com/docs/remote/wsl
+- https://code.visualstudio.com/docs/terminal/basics
+- https://code.visualstudio.com/docs/python/python-quick-start
+- https://code.visualstudio.com/docs/containers/overview
 Explore WSL, Git + GitHub setup, Python, Docker etc.
+
+![vscode_wsl](./assets/vscode_wsl.png)
 
 ### Install WSL extension
 - It should pop up automatically
@@ -494,7 +524,8 @@ code ~/git/llm-zoomcamp-2024
 - Edit `README.md` file again, refresh terminal, check yellow cross on OhMyZsh prompt, indicating there are changes
 
 ## Setup VS Code For Python on WSL With Miniconda
-https://engineeringfordatascience.com/posts/install_miniconda_from_the_command_line/
+
+![miniconda_python](./assets/miniconda_python.png)
 
 ### Install latest version of Miniconda
 - Run the following to install Miniconda
@@ -670,6 +701,9 @@ jupyter server list
 - Back in VS Code the same changes will appear
 
 ## Download and install Docker Desktop on Windows
+
+![docker](./assets/docker.png)
+
 - Run the following and confirm that Docker is not accessible
 ```bash
 docker
@@ -734,6 +768,8 @@ docker run -it python:3.10
 - Stop all containers and delete all containers and images via UI (could be done via terminal)
 
 ## Setup Docker with PostgreSQL (database)
+
+![postgresql](./assets/postgresql.png)
 
 ### Define containers
 - Create `docker-compose.yaml` file
@@ -880,6 +916,9 @@ SELECT * FROM cars WHERE year > 1975;
 ```
 
 ## Install Terraform Infrastructure as Code (IaC)
+
+![terraform](./assets/terraform.png)
+
 - For reference https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
 - Ensure that your system is up to date and you have installed the `gnupg`, `software-properties-common`, and `curl` packages installed. You will use these packages to verify HashiCorp's GPG signature and install HashiCorp's Debian package repository
 ```bash
@@ -1001,18 +1040,6 @@ terraform apply
 terraform destroy
 ```
 
-essentially, before starting the course, a beginner should understand the following (this course is not beginner friendly)
-- IT (setting up dev environments, infrastructure, VMs, software tools for coding, networks)
-- Command line, terminal, Linux
-- Git + GitHub
-- Python
-- SQL
-- IaC Terraform
-- Containerization (Docker)
-- Cloud
-
-de-zoomcamp linkedin posts + learnings
-de-zoomcamp course solutions (all homework assignments 100%)
-de-zoomcamp course leaderboard
-
-- LLM Zoomcamp
+## Support TechWithCosta @ YouTube (or not)
+[TechWithCosta](https://www.youtube.com/@TechWithCosta)\
+[![TechWithCosta](./assets/tech-1920-1080-markdown.png)](https://www.youtube.com/@TechWithCosta "TechWithCosta")
