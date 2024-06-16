@@ -697,7 +697,6 @@ docker run -d -p 8080:80 docker/welcome-to-docker
 ## Setup Docker with PostgreSQL (database)
 
 ### Define containers
-
 - Create `docker-compose.yaml` file
 - Add the following content
 - Save the file
@@ -757,6 +756,8 @@ docker compose up
 ```
 - After pulling both images, the containers should run
 - The terminal will be dedicated to these containers
+- Install extension on VS Code: `Docker` by Microsoft
+- You can interact with contained from VS Code directly (`Docker` panel)
 
 ### Setup `pgcli`
 - `pgcli` is a Python package, useful to interact with PostgreSQL DBs via terminal
@@ -832,132 +833,123 @@ SELECT * FROM cars WHERE year > 1975;
 ```
 
 ## Install Terraform Infrastructure as Code (IaC)
-
-Follow steps from: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
-
-Ensure that your system is up to date and you have installed the `gnupg`, `software-properties-common`, and `curl` packages installed. You will use these packages to verify HashiCorp's GPG signature and install HashiCorp's Debian package repository.
+- For reference https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+- Ensure that your system is up to date and you have installed the `gnupg`, `software-properties-common`, and `curl` packages installed. You will use these packages to verify HashiCorp's GPG signature and install HashiCorp's Debian package repository
 ```bash
 sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
 ```
-
-Install the HashiCorp GPG key.
+- Install the HashiCorp GPG key
 ```bash
 wget -O- https://apt.releases.hashicorp.com/gpg | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
 ```
-
-Verify the key's fingerprint.
+- Verify the key's fingerprint
 ```bash
 gpg --no-default-keyring \
 --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
 --fingerprint
 ```
-
-The gpg command will report the key fingerprint. Linux package checksum verification here, confirm fingerprint
-https://www.hashicorp.com/trust/security?product_intent=terraform
-
-Add the official HashiCorp repository to your system. The `lsb_release -cs` command finds the distribution release codename for your current system, such as `buster`, `groovy`, or `sid`.
+- The gpg command will report the key fingerprint. Linux package checksum verification here, confirm fingerprint here https://www.hashicorp.com/trust/security?product_intent=terraform
+- In the browser, search using `CTRL + F` and paste the string to compare 
+- An extra space should appear in the middle of the string, remove it to ensure match
+- Add the official HashiCorp repository to your system. The `lsb_release -cs` command finds the distribution release codename for your current system, such as `buster`, `groovy`, or `sid`
 ```bash
 echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
 https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
 sudo tee /etc/apt/sources.list.d/hashicorp.list
 ```
-
-Download the package information from HashiCorp.
+- Download the package information from HashiCorp
 ```bash
 sudo apt update
 ```
-
-Install Terraform from the new repository.
+- Install Terraform from the new repository
 ```bash
 sudo apt-get install terraform
 ```
-
-Verify installation.
+- Verify installation
 ```bash
 terraform
 ```
-
-Install the autocomplete package.
+- Install the autocomplete package.
 ```bash
 terraform -install-autocomplete
 ```
-
-Create a directory named `learn-terraform-docker-container`.
+- Create a directory named `learn-terraform-docker-container`
 ```bash
 mkdir learn-terraform-docker-container
 ```
-
-This working directory houses the configuration files that you write to describe the infrastructure you want Terraform to create and manage. When you initialize and apply the configuration here, Terraform uses this directory to store required plugins, modules (pre-written configurations), and information about the real infrastructure it created.
-
-Navigate into the working directory.
-
+- This working directory houses the configuration files that you write to describe the infrastructure you want Terraform to create and manage. When you initialize and apply the configuration here, Terraform uses this directory to store required plugins, modules (pre-written configurations), and information about the real infrastructure it created
+- Navigate into the working directory.
 ```bash
 cd learn-terraform-docker-container
 ```
-
-In the working directory, create a file called `main.tf` and paste the following Terraform configuration into it.
-
+- In the working directory, create a file called `main.tf`
 ```bash
 code main.tf
 ```
-Paste following code.
-
+- Paste the following Terraform configuration into it (for testing purposes), which is just an example to interact with Google Cloud Platform (GCP), to create a storage bucket and BigQuery dataset
+- I've used something similar during the `Data Engineering Zoomcamp` course by `DataTalksClub`
 ```terraform
 terraform {
   required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 3.0.1"
+    google = {
+      source  = "hashicorp/google"
+      version = "5.13.0"
     }
   }
 }
 
-provider "docker" {}
-
-resource "docker_image" "nginx" {
-  name         = "nginx"
-  keep_locally = false
+provider "google" {
+  credentials = "./keys/my-credentials.json"
+  project     = "terraform-demo-412110"
+  region      = "europe-southwest1"
 }
 
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.image_id
-  name  = "tutorial"
+resource "google_storage_bucket" "data-lake-bucket" {
+  name          = "terraform-demo-412110-terra-bucket"
+  location      = "EU"
+  force_destroy = true
 
-  ports {
-    internal = 80
-    external = 8000
+  # Optional, but recommended settings:
+  storage_class               = "STANDARD"
+  uniform_bucket_level_access = true
+
+  versioning {
+    enabled = true
+  }
+
+  lifecycle_rule {
+    action {
+      type = "Delete"
+    }
+    condition {
+      age = 30 // days
+    }
   }
 }
+
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id = "demo_dataset"
+  project    = "terraform-demo-412110"
+  location   = "EU"
+}
 ```
-
-Install extension on VS Code: `HashiCorp Terraform` by HashiCorp. Now the file gets highlighted.
-
-Initialize the project, which downloads a plugin called a provider that lets Terraform interact with Docker.
-
-If you get errors such as `Error: Failed to query available provider packages` you have permissions / connection problems with your WSL / Ubuntu. Workaround here https://github.com/microsoft/WSL/issues/8022
-
-If you have to restore the `/etc/resolv.conf` file:
-```bash
-sudo apt-get install --reinstall resolvconf
-```
-
+- Save the file
+- Install extension on VS Code: `HashiCorp Terraform` by HashiCorp
+- Now the file gets highlighted
+- Initialize the project, which gets provider plugins that lets Terraform interact with GCP
 ```bash
 terraform init
 ```
-
-Provision the NGINX server container with `apply`. When Terraform asks you to confirm type `yes` and press `ENTER`.
+- Two hidden folders should get created: `.terraform` and `.terraform.lock.hcl`
+- In a real scenario, using your GCP service account credentials, from this point on you could run the following
+```bash
+terraform plan
+```
 ```bash
 terraform apply
 ```
-
-Verify the existence of the NGINX container by visiting localhost:8000 in your web browser or running `docker ps` to see the container.
-```bash
-docker ps
-```
-
-To stop the container, run `terraform destroy`.
 ```bash
 terraform destroy
 ```
