@@ -645,7 +645,7 @@ docker
 ```
 - "Download for Windows" from https://www.docker.com/products/docker-desktop/
 - Start installation
-- If prompted, use WSL2 instead of Hyper-V during setup
+- If your Windows version is not `Home`, and instead is `Enterprise` or other, you might see an additional tick box during setup, if so, do use `WSL2 instead of Hyper-V`
 - Run Docker Desktop after installation
 - Accept "Docker Subscription Service Agreement"
 - Sign up and / or sign in
@@ -653,52 +653,54 @@ docker
 - Skip survey, or not
 - Check for updates on bottom right corner
 - Download update
-- Save your stuff
-- Update and restart machine
-- Start Docker engine
-
-https://docs.docker.com/desktop/wsl/
-
-- Go to Settings -> General and check if "Use the WSL 2 based engine" is ticked
-- Go to Settings -> Resources -> WSL Integration: check if "Enable integration with my default WSL distro" is ticked and enable your distro "Ubuntu-22.04"
+- "Update and restart" to update Docker Desktop
+- Check green "Engine running" message on bottom left corner
+- Pin Docker to taskbar
+- Save your stuff and restart your Windows machine
+- Run Docker Desktop
+- You can always check if Docker is running in the Windows system tray icon
+- Go to `Settings` -> `General` and check if "Use the WSL 2 based engine" is ticked, because "WSL 2 provides better performance than the Hyper-V backend"
+- Go to `Settings` -> `Resources` -> `WSL Integration`: check if "Enable integration with my default WSL distro" is ticked and enable your distro "Ubuntu-22.04"
 - Apply & restart
-
-Now the following command should output something
+- Cancel
+- Now the following command should output something on your Linux terminal
 ```bash
 docker
 ```
-
-Run your first container
+- Run your first test container
 ```bash
-docker run -d -p 8080:80 docker/welcome-to-docker
+docker run hello-world
 ```
-
-Open browser and go to http://localhost:8080/
-
-If you get this error
+- If you get an error similar to the following
 ```bash
 docker: Error response from daemon: Head "https://registry-1.docker.io/v2/docker/welcome-to-docker/manifests/latest": unauthorized: incorrect username or password.
 ```
-
-Log out from Docker using the system tray icon. Then login via terminal
+- Log out from Docker and login again via terminal, replacing your username / email
 ```bash
-docker login --username techwithcosta
+docker logout
+docker login --username techwithcosta@gmail.com
 ```
-Enter password
-
-Run your first container
+- Enter password, "Login Succeeded"
+- Run your first test container
+```bash
+docker run hello-world
+```
+- The image should be fetched from the server and the container will run, showing the test message output "Hello from Docker!"
+- Open Docker Desktop and see the container with a random name and its image
+- Run another test container
 ```bash
 docker run -d -p 8080:80 docker/welcome-to-docker
 ```
-
-Open browser and go to http://localhost:8080/
+- Open browser and go to http://localhost:8080/
+- Stop all containers and delete all containers and images via UI (could be done via terminal)
 
 ## Setup Docker with PostgreSQL (database)
 
 ### Define containers
 
-Create **docker-compose.yaml** file
-
+- Create `docker-compose.yaml` file
+- Add the following content
+- Save the file
 ```yaml
 services:
   pgdatabase:
@@ -706,9 +708,9 @@ services:
     environment:
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=ny_taxi
+      - POSTGRES_DB=my_test_db
     volumes:
-      - "./ny_taxi_postgres_data:/var/lib/postgresql/data"
+      - "./my_test_db_postgres_data:/var/lib/postgresql/data"
     ports:
       - "5432:5432"
   pgadmin:
@@ -716,7 +718,7 @@ services:
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
       - PGADMIN_DEFAULT_PASSWORD=root
-      - POSTGRES_DB=ny_taxi
+      - POSTGRES_DB=my_test_db
     volumes:
       - pgadmin_data:/var/lib/pgadmin/data
     ports:
@@ -724,60 +726,80 @@ services:
 volumes:
   pgadmin_data:
 ```
-Stop all containers to ensure all ports are available.
-
+---
+- This file defines two Docker containers or "services"
+#### pgdatabase
+- **image**: Uses the PostgreSQL version 13 image.
+- **environment**:
+  - `POSTGRES_USER=root`: Sets the PostgreSQL username to "root".
+  - `POSTGRES_PASSWORD=root`: Sets the PostgreSQL password to "root".
+  - `POSTGRES_DB=my_test_db`: Creates a database named "my_test_db".
+- **volumes**:
+  - `./my_test_db_postgres_data:/var/lib/postgresql/data`: Maps the local directory `my_test_db_postgres_data` to the PostgreSQL data directory to persist data.
+- **ports**:
+  - `5432:5432`: Exposes PostgreSQL on port 5432.
+#### pgadmin
+- **image**: Uses the pgAdmin 4 image.
+- **environment**:
+  - `PGADMIN_DEFAULT_EMAIL=admin@admin.com`: Sets the default admin email for pgAdmin.
+  - `PGADMIN_DEFAULT_PASSWORD=root`: Sets the default admin password for pgAdmin.
+  - `POSTGRES_DB=my_test_db`: This environment variable is actually not used by pgAdmin, can be ignored.
+- **volumes**:
+  - `pgadmin_data:/var/lib/pgadmin/data`: Uses a Docker volume named `pgadmin_data` to persist pgAdmin data.
+- **ports**:
+  - `8080:80`: Exposes pgAdmin on port 8080 of the host.
+- And one volume `pgadmin_data`, to store pgAdmin data
+---
+- Make sure all containers are stopped to free up all ports
+- From the same folder where the `docker-compose.yaml` is run
 ```bash
 docker compose up
 ```
+- After pulling both images, the containers should run
+- The terminal will be dedicated to these containers
 
-### Setup pgcli
-
-Install pgcli dependencies
-https://www.pgcli.com/install
-
+### Setup `pgcli`
+- `pgcli` is a Python package, useful to interact with PostgreSQL DBs via terminal
+- Install pgcli dependencies (for reference https://www.pgcli.com/install)
 ```bash
 sudo apt-get install libpq-dev
 ```
-
-Install pgcli with correct env activated (it's a Python package)
+- From a new termial, install `pgcli`, with correct conda env activated (it's a Python package)
 ```bash
 pip install pgcli
 ```
 
 ### Connect to PostgreSQL via pgcli
-
-Access the PostgreSQL DB on Docker container, use the credentials from docker file -h host, -p port, -u user, -d db name
+- Access the PostgreSQL DB on Docker container, use the credentials from Docker compose file -h is host, -p is port, -u is user, -d is DB name
 ```bash
-pgcli -h localhost -p 5432 -u root -d ny_taxi
+pgcli -h localhost -p 5432 -u root -d my_test_db
 ```
-Enter password
-
-Check empty list of tables inside DB
+- Enter password `root`
+- Check empty list of tables inside DB
 ```bash
 \dt
 ```
-Quit by pressing `q`
+- Test SQL with the following command
+```bash
+SELECT 1 AS hello_world;
+```
+- Quit from `pgcli` by running `quit`
 
 ### Connect to PostgreSQL via pgAdmin
-
-Both containers have to be connected to the same network in order to pdAdmin connect to PostgreSQL DB.
-
-Go to browser and http://localhost:8080/. pgAdmin should open. Login using credentials on docker file.
-
-On pdAdmin go to Object -> Register -> Server. Give it a name "mydb", go to Connection "Host name/address" should be "pgdatabase" or "host.docker.internal". Port is 5432, Username "root", Password "root".
-
-**1. Using pgdatabase as Hostname**
-When you use pgdatabase as the hostname, it works because Docker Compose creates a default network for the services defined in the same docker-compose.yml file. Containers in the same Docker Compose project can communicate with each other using their service names as hostnames. This means pgadmin can reach pgdatabase by resolving pgdatabase to the correct IP address of the PostgreSQL container.
-
-**2. Using host.docker.internal as Hostname**
-When you use host.docker.internal as the hostname, it works because host.docker.internal is a special DNS name that resolves to the internal IP address of the host machine. This allows containers to access services running on the host machine. Since you mapped port 5432 on the host to port 5432 on the pgdatabase container, pgAdmin can connect to PostgreSQL using the host's IP address.
-
-https://stackoverflow.com/questions/25540711/docker-postgres-pgadmin-local-connection
+- Both containers have to be connected to the same network in order for pdAdmin to connect to PostgreSQL DB
+- Go to browser and http://localhost:8080/
+- pgAdmin should open, if the previous container output still shows up, clear your browser's cookies / history by pressing `CTRL + SHIFT + DEL`, or open it in a private browser tab
+- Login using credentials from Docker compose file `admin@admin.com` and `root`
+- On pdAdmin go to `Object` -> `Register` -> `Server`
+- Give it a name "test_pg"
+- Go to Connection tab "Host name/address" should be "pgdatabase" or "host.docker.internal"
+- Port is 5432
+- Username is "root"
+- Password is "root"
 
 ### Create sample table via pgAdmin
-
-Create sample table with new query: https://www.w3schools.com/postgresql/postgresql_create_table.php
-
+- Create sample table
+- Open query tool and run the following (for reference https://www.w3schools.com/postgresql/postgresql_create_table.php)
 ```sql
 CREATE TABLE cars (
   brand VARCHAR(255),
@@ -785,9 +807,7 @@ CREATE TABLE cars (
   year INT
 );
 ```
-
-Insert some data
-
+- Populate table with sample data (for reference https://www.w3schools.com/postgresql/postgresql_insert_into.php)
 ```sql
 INSERT INTO cars (brand, model, year)
 VALUES
@@ -795,18 +815,21 @@ VALUES
   ('BMW', 'M1', 1978),
   ('Toyota', 'Celica', 1975);
 ```
+- Expand `test_pg` -> `Databases` -> `my_test_db` -> `Schemas` -> `public` -> `Tables` -> `cars` -> `right click` -> `View/Edit Data` -> `All Rows`
 
-View all rows on pgAdmin.
-
-### Access same table via pgcli
-
-On pgcli run \dt see new table.
+### Access same test table via pgcli
+- On pgcli run `\dt` see new table
+- Run the following SQL queries to explore the data
+- Use `q` to quit the query results view
 ```sql
 SELECT * FROM cars;
-SELECT * FROM cars ORDER BY year;
-SELECT * FROM cars WHERE year >= 1975;
 ```
-
+```sql
+SELECT * FROM cars ORDER BY year;
+```
+```sql
+SELECT * FROM cars WHERE year > 1975;
+```
 
 ## Install Terraform Infrastructure as Code (IaC)
 
