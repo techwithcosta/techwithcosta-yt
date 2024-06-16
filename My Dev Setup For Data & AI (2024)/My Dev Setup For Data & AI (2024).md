@@ -52,11 +52,10 @@ Enable both:
 ### Restart machine
 
 ### Install / Update WSL
-Using Command Prompt (CMD) run several times
+- Using Command Prompt (CMD) run the following several times until the latest version is installed
 ```bash
 wsl --update
 ```
-until the last version is installed
 
 ### Check available Linux distros
 ```bash
@@ -67,10 +66,20 @@ wsl --list --online
 ```bash
 wsl --install -d Ubuntu-22.04
 ```
+- Define UNIX username
+- Define password
 
-### Define UNIX username
-
-### Define password
+### Uninstall distribution
+- If you eventually need to uninstall a Linux distribution from WSL, go to CMD
+- Get the distribution name
+```bash
+wsl --list
+```
+- Unregister the distribution, **BE CAREFUL**, everything will be deleted, backup your data if needed
+```bash
+wsl --unregister Ubuntu-22.04
+```
+- Then go to "Add or remove programs", search for the distribution name and uninstall it
 
 ### Install terminal
 From Microsoft Store install the official Terminal app by Microsoft Corporation, if you don't have it yet
@@ -451,7 +460,7 @@ code ~/git/llm-zoomcamp-2024
 - Check repo on GitHub to see change
 - `Would you like Visual Studio Code to periodically run "git fetch"?`No, I like to pull the code manually
 - Can do this via terminal `git pull` or on bottom left corner with "cycle" symbol
-- Edit `README.md` file again, refresh terminal, check cross on OhMyZsh prompt, indicating there are changes
+- Edit `README.md` file again, refresh terminal, check yellow cross on OhMyZsh prompt, indicating there are changes
 
 ## Setup VS Code For Python on WSL With Miniconda
 https://engineeringfordatascience.com/posts/install_miniconda_from_the_command_line/
@@ -477,28 +486,63 @@ conda config --set auto_activate_base false
 ```
 - Refresh the terminal, it does not activate anymore
 
-### Create conda environment
-- Create conda env for project named `llm-zoomcamp-2024-env`
+### Interact with conda environments
+- Create new conda env for project named `llm-zoomcamp-2024-env` and install specific Python version automatically
 ```bash
 conda create -n llm-zoomcamp-2024-env python=3.10
 ```
+- `-n` is the simplification of `--name`
 - I like to use the project folder name + `-env`
-- Change the Python version if needed
-- If you omit "python=3.10", a new env will be created but without Python and you would need to install it manually
-
-### Conda environments interaction
-You can activate specific environments with
+- Change the project name and/or Python version if needed
+- Activate conda env, its name will appear behind the prompt
 ```bash
 conda activate llm-zoomcamp-2024-env
 ```
-Deactivate the current env
-```bash
-conda deactivate
-```
-List envs (if one is activated, will show asterisk on it)
+- List envs (if one is activated, will show asterisk on it)
 ```bash
 conda env list
 ```
+- Deactivate the current env, its name will disappear behind the prompt
+```bash
+conda deactivate
+```
+- Delete conda env
+```bash
+conda remove -n llm-zoomcamp-2024-env --all
+```
+- List envs
+```bash
+conda env list
+```
+- We can create the same env by avoiding typing the env name, from the target project folder
+```bash
+conda create -n "$(basename $(pwd)-env)" python=3.10
+```
+- Check automatic folder name retrieval
+```bash
+echo "$(basename $(pwd)-env)"
+```
+- If you omit `python=3.10`, a new env will be created without Python and you would need to install it manually, after its activation
+```bash
+conda create --name llm-zoomcamp-2024-env
+```
+- Activate conda env
+```bash
+conda activate llm-zoomcamp-2024-env
+```
+- Run Python, without success
+```bash
+python
+```
+- Install Python manually in the activated env
+```bash
+conda install python=3.10
+```
+- Run Python, with success
+```bash
+python
+```
+- Type `exit()` to exit the interpreter
 
 ### Open project on VS Code
 Open VS Code from project folder by running
@@ -506,10 +550,11 @@ Open VS Code from project folder by running
 code ~/git/llm-zoomcamp-2024
 ```
 
-### Create and save Python file
+### Create Python file
 ```bash
-code main.py
+code script.py
 ```
+- Save the file
 
 ### Install extension
 `Python` by Microsoft
@@ -524,33 +569,74 @@ code main.py
 - You might need to do this a couple of times to save the setup
 
 ### Python manager workflow
-- For each project I have within the `git` folder that require Python, I create a specific conda env for each one, to ensure package isolation
+- For each project inside the `git` folder that require Python, I create a specific conda env to ensure package isolation
 - Then I associate each VS Code instance to each project / conda env / interpreter
 
-### Python examples
-- script.py with print('hello world'), execute using UI play and terminal
+### Python interaction options
+#### Script
+- Add the following to `script.py`
+```python
+# this is a comment
+print('hello world')
 
-### Additional extension
-`Jupyter` by Microsoft
+# this is another comment
+x = 2
+y = 5
+print(x * y)
+```
+- Execute the whole script using UI play symbol, this will use the current activated conda env interpreter
+- Or via terminal
+```bash
+python script.py
+```
 
-### Python examples
-- cells.py with #%%, execute cell using UI, CTRL + ENTER or SHIFT + ENTER, install ipykernel package, show interactive window, jupyter tab
-- save the file as cells.ipynb to see it as a classic jupyter notebook, to run it select an interpreter
+#### Jupyter cells
+- Sometimes I want to run sections of my code independently, similar to how you might work in a Jupyter Notebook, useful for debugging purposes during development, more flexible
+- Duplicate `script.py` and call it `cells.py`
+- Install extension `Jupyter` by Microsoft
+- Separate code in cells or section with `#%%` tags
+- To execute one cell, use the UI
+- The interactive window will appear
+- Install `ipykernel` package in the activated conda env
+- We can also execute cell via keyboard shortcut, use this all the time
+- `CTRL + ENTER`, to run the current cell and stay within the same cell
+- `SHIFT + ENTER`, to run the current cell and move to the next cell below
+- Check the outputs from each cell in the interactive window straight away
+- Check Jupyter tab with variables from current session
+- Change variables and see them there
+- The interactive window can be refreshed by "Clear All"
+- "Restart" will restart the kernel, sometimes useful to reset all variables or due to bugs
+- Kernel can also be changed
+- Run all cells again
+- Save the file as `cells.ipynb`, as a classic Jupyter notebook
+- Open it to run it
+- Select an interpreter
+- We can interact with it similarly to the conventional Jupyter notebooks on browser
 
-### Python example (Jupyter notebook browser)
-If you really want to run a jupyter notebook on browser
+#### Jupyter notebook on browser with server
+- If you really want to run a Jupyter notebook on browser
+- With the proper conda env activated, install Jupyter package
 ```bash
 pip install jupyter
+```
+- Initialize Jupyter server
+```bash
 jupyter notebook
 ```
-Jupyter server will start and ports will be forwarded. Then open the browser. Copy token from
+- The current terminal will be dedicated to it
+- A port will be forward automatically and associated to the server
+- Open in browser
+- Copy token after running the following in a new terminal (after `?token=`)
 ```bash
 jupyter server list
 ```
-Paste token on browser, set up a new password, login, open the notebook from the file explorer.
-
-### GIt example
-Commit Python file.
+- Paste token on browser
+- Enter a new password
+- "Log in and set new password"
+- Open the notebook from the explorer
+- Change stuff and run
+- Save the notebook
+- Back in VS Code the same changes will appear
 
 ## Download and install Docker Desktop on Windows
 
