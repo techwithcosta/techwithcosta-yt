@@ -42,11 +42,9 @@
 [**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)\
 ![llm_zoomcamp](./assets/llm_zoomcamp.png)
 
-
 ### **Machine Learning (ML) Zoomcamp**
 [**Course link**](https://github.com/DataTalksClub/machine-learning-zoomcamp)\
 ![ml_zoomcamp](./assets/ml_zoomcamp.png)
-
 
 ### **Machine Learning Operations (MLOps) Zoomcamp**
 [**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)\
