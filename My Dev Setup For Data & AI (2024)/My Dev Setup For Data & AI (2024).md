@@ -4,12 +4,17 @@
 - To share my current developer setup with others
 - Make my life easier when I need to setup a new machine
 - Make others' lives easier by providing all steps
-- This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence (AI)`, `Computer Science (CS)`, `Software Engineering (SWE)`, etc.
-- I think this gives a pretty nice overview of a possible local dev setup, and how different tools work together, with an engineering perspective
+- This is a basic setup to learn about:
+  - `Data` (`Engineering`, `Analysis`, `Science`)
+  - `Artificial Intelligence (AI)`
+  - `Computer Science (CS)`
+  - `Software Engineering (SWE)`
+  - etc.
+- I think this gives a cool overview of a possible local dev setup, and how different tools work together, with an engineering perspective
 - Of course this can be automated in the future, with Shell scripting, devcontainer (Docker), etc. But honestly, I'm currently exploring a bunch of different tech stacks to be able to define something specific
 - Depending on your needs, just install what you need from here, and complete it with additional things you might need, in any case, this should cover the basics for automation (`Python`), database interaction (`PostgreSQL`), containerization (`Docker`) which enable you to install pretty much everything (the `Mage` orchestrator, etc.)
 - I've used this setup to finish the `Data Engineering Zoomcamp` free course by `DataTalksClub`
-- I will be using this same setup to go through the `LLM Zoomcamp` free course by `DataTalksClub`
+- I will use this setup for the `LLM Zoomcamp` free course by `DataTalksClub`
 
 ## DataTalksClub courses
 
@@ -18,8 +23,13 @@
 `This setup started based on the following free course by DataTalksClub:`
 
 ### Data Engineering (DE) Zoomcamp
-[**Course link**](https://github.com/DataTalksClub/data-engineering-zoomcamp)\
+[**Course link**](https://github.com/DataTalksClub/data-engineering-zoomcamp)
+
 ![de_zoomcamp](./assets/de_zoomcamp.png)
+
+- Finished in the Top 10, out of 1500 students
+![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
+- Finished all homework assignments with 100%. All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
 
 #### LinkedIn Posts
 - [**Module 1:** Containerization and Infrastructure as Code](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7155898562508161024-cWg7?utm_source=share&utm_medium=member_desktop)
@@ -32,22 +42,22 @@
 - [**Module 6:** Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7176578332061298688-tg3F?utm_source=share&utm_medium=member_desktop)
 - [**Final Project:** Automating YouTube Analytics with Custom AI Integrations](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7187469167866830848--86X?utm_source=share&utm_medium=member_desktop)
 - [**Certificate**](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7191153615980392448-6rYO?utm_source=share&utm_medium=member_desktop)
-- Finished in the Top 10, out of 1500 students
-![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
-- Finished all homework assignments with 100%. All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
 
 `This can be extended to the following courses:`
 
 ### Large Language Models (LLM) Zoomcamp
-[**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)\
+[**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)
+
 ![llm_zoomcamp](./assets/llm_zoomcamp.png)
 
 ### **Machine Learning (ML) Zoomcamp**
-[**Course link**](https://github.com/DataTalksClub/machine-learning-zoomcamp)\
+[**Course link**](https://github.com/DataTalksClub/machine-learning-zoomcamp)
+
 ![ml_zoomcamp](./assets/ml_zoomcamp.png)
 
 ### **Machine Learning Operations (MLOps) Zoomcamp**
-[**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)\
+[**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)
+
 ![mlops_zoomcamp](./assets/mlops_zoomcamp.png)
 
 **And other programming courses / coding projects you might be working on.**
