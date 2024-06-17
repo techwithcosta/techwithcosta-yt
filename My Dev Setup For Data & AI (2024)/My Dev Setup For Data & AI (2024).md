@@ -1,35 +1,54 @@
 # My Dev Setup For Data & AI (2024)
 
-TODO: add images
-TODO: check old videos and notes
-
-essentially, before starting the course, a beginner should understand the following (this course is not beginner friendly)
-- IT (setting up dev environments, infrastructure, VMs, software tools for coding, networks)
-- Command line, terminal, Linux
-- Git + GitHub
-- Python
-- SQL
-- IaC Terraform
-- Containerization (Docker)
-- Cloud
-
-de-zoomcamp linkedin posts + learnings
-de-zoomcamp course solutions (all homework assignments 100%)
-de-zoomcamp course leaderboard
-
-- LLM Zoomcamp
-
 ## Purpose
 - To share my current developer setup with others
 - Make my life easier when I need to setup a new machine
 - Make others' lives easier by providing all steps
-- This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence`, `Computer Science`, `Software Engineering`, etc.
+- This is a basic setup to learn about `Data` (`Engineering`, `Analysis`, `Science`), `Artificial Intelligence (AI)`, `Computer Science (CS)`, `Software Engineering (SWE)`, etc.
 - I think this gives a pretty nice overview of a possible local dev setup, and how different tools work together, with an engineering perspective
-- Of course this can be automated in the future, with Shell scripting, devcontainer (Docker), etc. But honestly I'm still exploring a bunch of different tech stacks
+- Of course this can be automated in the future, with Shell scripting, devcontainer (Docker), etc. But honestly, I'm currently exploring a bunch of different tech stacks to be able to define something specific
 - Depending on your needs, just install what you need from here, and complete it with additional things you might need, in any case, this should cover the basics for automation (`Python`), database interaction (`PostgreSQL`), containerization (`Docker`) which enable you to install pretty much everything (the `Mage` orchestrator, etc.)
 - I've used this setup to finish the `Data Engineering Zoomcamp` free course by `DataTalksClub`
 - I will be using this same setup to go through the `LLM Zoomcamp` free course by `DataTalksClub`
-- This file will be dynamic, as my current needs change 
+
+## DataTalksClub courses
+
+![data_talks_club](./assets/data_talks_club.png)
+
+`This setup started based on the following free course by DataTalksClub:`
+
+### Data Engineering (DE) Zoomcamp
+![de_zoomcamp](./assets/de_zoomcamp.png)
+
+#### LinkedIn Posts
+- [Module 1: Containerization and Infrastructure as Code](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7155898562508161024-cWg7?utm_source=share&utm_medium=member_desktop)
+- [Module 2: Workflow Orchestration](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7159891557679038464-aevW?utm_source=share&utm_medium=member_desktop)
+- [Workshop 1: Data Ingestion with dlt](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7160642685089808384-d3JT?utm_source=share&utm_medium=member_desktop)
+- [Module 3: Data Warehouse & BigQuery](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7161744118996529153-OZRD?utm_source=share&utm_medium=member_desktop)
+- [Module 4: Analytics Engineering](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7166111946059067392-_Jdw?utm_source=share&utm_medium=member_desktop)
+- [Module 5: Batch Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-bigdata-activity-7169013858496360448-RICB?utm_source=share&utm_medium=member_desktop)
+- [Workshop 2: Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7171218183377420290--pQK?utm_source=share&utm_medium=member_desktop)
+- [Module 6: Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7176578332061298688-tg3F?utm_source=share&utm_medium=member_desktop)
+- [Final Project: Automating YouTube Analytics with Custom AI Integrations](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7187469167866830848--86X?utm_source=share&utm_medium=member_desktop)
+- [Certificate](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7191153615980392448-6rYO?utm_source=share&utm_medium=member_desktop)
+- Finished in the Top 10, out of 1500 students
+![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
+- Finished all homework assignments with 100%. All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
+
+`And it can be extended to the following courses:`
+
+### Large Language Models (LLM) Zoomcamp
+![llm_zoomcamp](./assets/llm_zoomcamp.png)
+
+
+### **Machine Learning (ML) Zoomcamp**
+![ml_zoomcamp](./assets/ml_zoomcamp.png)
+
+
+### **Machine Learning Operations (MLOps) Zoomcamp**
+![mlops_zoomcamp](./assets/mlops_zoomcamp.png)
+
+**And other programming courses / coding projects you might be working on.**
 
 ## Summary
 - **Main Operating System (OS):** Windows 11 (applicable to Windows 10)
@@ -40,7 +59,7 @@ de-zoomcamp course leaderboard
 - **Python Environment Manager:** Miniconda
 - **Containerization:** Docker Desktop (installed on Windows)
 - **Database:** PostgreSQL + pgcli + pgAdmin
-
+- **Infrastructure as Code (IaC):** Terraform
 
 ## Setup Windows Subsystem for Linux (WSL)
 
