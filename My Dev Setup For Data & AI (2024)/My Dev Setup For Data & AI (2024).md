@@ -1,22 +1,20 @@
 # My Dev Setup For Data & AI (2024)
 
+- I have used this setup to finish the `Data Engineering Zoomcamp` course by `DataTalksClub`
+- I am using this setup for the `LLM Zoomcamp` course by `DataTalksClub`
+
 ## Goals
-- To share my current developer setup with others, in a detailed way
+- To share my current developer setup with others (**in a detailed way**)
 - A beginner should be able to follow all steps (**I will post a video**)
 - Make my life easier when I need to setup a new machine
 - Make others' lives easier by sharing all steps
-- This is a basic setup to learn about:
+- A basic setup to learn about:
   - `Data` (`Engineering`, `Analysis`, `Science`)
   - `Artificial Intelligence (AI)`
   - `Computer Science (CS)`
   - `Software Engineering (SWE)`
   - etc.
-- I think this gives a cool overview of a possible local dev setup, and how different tools work together, with an engineering perspective
-- Of course this can be automated in the future, with Shell scripting, devcontainer (Docker), etc.
-- Depending on your needs, just install what you need from here, and complete it with additional tools you might need
-- This should cover the basics for automation (`Python`), containerization (`Docker`), database interaction (`PostgreSQL`), Infrastructure as Code (IaC) (`Terraform`)
-- I have used this setup to finish the `Data Engineering Zoomcamp` course by `DataTalksClub`
-- I am using this setup for the `LLM Zoomcamp` course by `DataTalksClub`
+- Should cover the basics for automation (`Python`), containerization (`Docker`), database interaction (`PostgreSQL`), Infrastructure as Code (IaC) (`Terraform`)
 
 ## DataTalksClub courses
 
@@ -26,9 +24,10 @@ A team of instructors sharing free data courses with the world. **Support them!*
 **This setup started based on the following course by DataTalksClub:**
 
 ### Data Engineering (DE) Zoomcamp
+
 [**Course link**](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-![de_zoomcamp](./assets/de_zoomcamp.png)
+[![de_zoomcamp](./assets/de_zoomcamp.png)](https://github.com/DataTalksClub/data-engineering-zoomcamp "de_zoomcamp")
 
 - Finished in the **Top 10** (out of 1500 students)
 ![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
@@ -52,17 +51,16 @@ A team of instructors sharing free data courses with the world. **Support them!*
 ### Large Language Models (LLM) Zoomcamp
 [**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)
 
-![llm_zoomcamp](./assets/llm_zoomcamp.png)
+[![llm_zoomcamp](./assets/llm_zoomcamp.png)](https://github.com/DataTalksClub/llm-zoomcamp "llm_zoomcamp")
 
 ### **Machine Learning (ML) Zoomcamp**
 [**Course link**](https://github.com/DataTalksClub/machine-learning-zoomcamp)
 
-![ml_zoomcamp](./assets/ml_zoomcamp.png)
+[![ml_zoomcamp](./assets//ml_zoomcamp.png)](https://github.com/DataTalksClub/machine-learning-zoomcamp "ml_zoomcamp")
 
 ### **Machine Learning Operations (MLOps) Zoomcamp**
 [**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)
-
-![mlops_zoomcamp](./assets/mlops_zoomcamp.png)
+[![mlops_zoomcamp](./assets//mlops_zoomcamp.png)](https://github.com/DataTalksClub/mlops-zoomcamp "mlops_zoomcamp")
 
 **And other programming courses / coding projects you might be working on.**
 
@@ -1074,6 +1072,9 @@ terraform apply
 ```bash
 terraform destroy
 ```
+
+## Improvements
+- **Setup automation:** shell scripting, devcontainer (Docker), etc.
 
 ## Support TechWithCosta @ YouTube (or not)
 [TechWithCosta](https://www.youtube.com/@TechWithCosta)\
