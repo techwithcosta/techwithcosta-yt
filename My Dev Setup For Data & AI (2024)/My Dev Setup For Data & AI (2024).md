@@ -1,7 +1,8 @@
 # My Dev Setup For Data & AI (2024)
 
-## Purpose
-- To share my current developer setup with others
+## Goals
+- To share my current developer setup with others, in a detailed way
+- A beginner should be able to follow all steps (**I will post a video**)
 - Make my life easier when I need to setup a new machine
 - Make others' lives easier by sharing all steps
 - This is a basic setup to learn about:
@@ -21,6 +22,7 @@
 
 ![data_talks_club](./assets/data_talks_club.png)
 
+A team of instructors sharing free data courses with the world. **Support them!**\
 **This setup started based on the following course by DataTalksClub:**
 
 ### Data Engineering (DE) Zoomcamp
@@ -28,9 +30,10 @@
 
 ![de_zoomcamp](./assets/de_zoomcamp.png)
 
-- Finished in the Top 10, out of 1500 students
+- Finished in the **Top 10** (out of 1500 students)
 ![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
-- Finished all homework assignments with 100%. All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
+- Finished all homework assignments with 100%
+- All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
 
 #### LinkedIn Posts
 - [**Module 1:** Containerization and Infrastructure as Code](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7155898562508161024-cWg7?utm_source=share&utm_medium=member_desktop)
@@ -44,7 +47,7 @@
 - [**Final Project:** Automating YouTube Analytics with Custom AI Integrations](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7187469167866830848--86X?utm_source=share&utm_medium=member_desktop)
 - [**Certificate**](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7191153615980392448-6rYO?utm_source=share&utm_medium=member_desktop)
 
-`This can be extended to the following courses:`
+**This can be extended to the following courses:**
 
 ### Large Language Models (LLM) Zoomcamp
 [**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)
