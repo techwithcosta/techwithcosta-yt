@@ -21,7 +21,7 @@
 
 ![data_talks_club](./assets/data_talks_club.png)
 
-`This setup started based on the following free course by DataTalksClub:`
+**This setup started based on the following course by DataTalksClub:**
 
 ### Data Engineering (DE) Zoomcamp
 [**Course link**](https://github.com/DataTalksClub/data-engineering-zoomcamp)
