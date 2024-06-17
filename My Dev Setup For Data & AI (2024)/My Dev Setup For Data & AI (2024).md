@@ -21,21 +21,21 @@
 ![de_zoomcamp](./assets/de_zoomcamp.png)
 
 #### LinkedIn Posts
-- [Module 1: Containerization and Infrastructure as Code](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7155898562508161024-cWg7?utm_source=share&utm_medium=member_desktop)
-- [Module 2: Workflow Orchestration](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7159891557679038464-aevW?utm_source=share&utm_medium=member_desktop)
-- [Workshop 1: Data Ingestion with dlt](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7160642685089808384-d3JT?utm_source=share&utm_medium=member_desktop)
-- [Module 3: Data Warehouse & BigQuery](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7161744118996529153-OZRD?utm_source=share&utm_medium=member_desktop)
-- [Module 4: Analytics Engineering](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7166111946059067392-_Jdw?utm_source=share&utm_medium=member_desktop)
-- [Module 5: Batch Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-bigdata-activity-7169013858496360448-RICB?utm_source=share&utm_medium=member_desktop)
-- [Workshop 2: Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7171218183377420290--pQK?utm_source=share&utm_medium=member_desktop)
-- [Module 6: Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7176578332061298688-tg3F?utm_source=share&utm_medium=member_desktop)
-- [Final Project: Automating YouTube Analytics with Custom AI Integrations](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7187469167866830848--86X?utm_source=share&utm_medium=member_desktop)
-- [Certificate](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7191153615980392448-6rYO?utm_source=share&utm_medium=member_desktop)
+- [**Module 1:** Containerization and Infrastructure as Code](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7155898562508161024-cWg7?utm_source=share&utm_medium=member_desktop)
+- [**Module 2:** Workflow Orchestration](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7159891557679038464-aevW?utm_source=share&utm_medium=member_desktop)
+- [**Workshop 1:** Data Ingestion with dlt](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7160642685089808384-d3JT?utm_source=share&utm_medium=member_desktop)
+- [**Module 3:** Data Warehouse & BigQuery](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7161744118996529153-OZRD?utm_source=share&utm_medium=member_desktop)
+- [**Module 4:** Analytics Engineering](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-analyticsengineering-activity-7166111946059067392-_Jdw?utm_source=share&utm_medium=member_desktop)
+- [**Module 5:** Batch Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-bigdata-activity-7169013858496360448-RICB?utm_source=share&utm_medium=member_desktop)
+- [**Workshop 2:** Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7171218183377420290--pQK?utm_source=share&utm_medium=member_desktop)
+- [**Module 6:** Stream Processing](https://www.linkedin.com/posts/costadms_dezoomcamp-dataengineering-kafka-activity-7176578332061298688-tg3F?utm_source=share&utm_medium=member_desktop)
+- [**Final Project:** Automating YouTube Analytics with Custom AI Integrations](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7187469167866830848--86X?utm_source=share&utm_medium=member_desktop)
+- [**Certificate**](https://www.linkedin.com/posts/costadms_dezoomcamp-data-tech-activity-7191153615980392448-6rYO?utm_source=share&utm_medium=member_desktop)
 - Finished in the Top 10, out of 1500 students
 ![de_zoomcamp_leaderboard](./assets/de_zoomcamp_leaderboard.png)
 - Finished all homework assignments with 100%. All solutions and answers [HERE](https://github.com/techwithcosta/de-zoomcamp-2024)
 
-`And it can be extended to the following courses:`
+`This can be extended to the following courses:`
 
 ### Large Language Models (LLM) Zoomcamp
 ![llm_zoomcamp](./assets/llm_zoomcamp.png)
