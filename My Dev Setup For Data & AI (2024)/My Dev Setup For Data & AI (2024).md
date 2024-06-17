@@ -1,5 +1,6 @@
 # My Dev Setup For Data & AI (2024)
 
+- What's up programmers, devs, engineers, coding enthusiasts! 👋
 - I have used this setup to finish the `Data Engineering Zoomcamp` course by `DataTalksClub`
 - I am using this setup for the `LLM Zoomcamp` course by `DataTalksClub`
 
