@@ -18,6 +18,7 @@
 `This setup started based on the following free course by DataTalksClub:`
 
 ### Data Engineering (DE) Zoomcamp
+[**Course link**](https://github.com/DataTalksClub/data-engineering-zoomcamp)\
 ![de_zoomcamp](./assets/de_zoomcamp.png)
 
 #### LinkedIn Posts
@@ -38,14 +39,17 @@
 `This can be extended to the following courses:`
 
 ### Large Language Models (LLM) Zoomcamp
+[**Course link**](https://github.com/DataTalksClub/llm-zoomcamp)\
 ![llm_zoomcamp](./assets/llm_zoomcamp.png)
 
 
 ### **Machine Learning (ML) Zoomcamp**
+[**Course link**](https://github.com/DataTalksClub/machine-learning-zoomcamp)\
 ![ml_zoomcamp](./assets/ml_zoomcamp.png)
 
 
 ### **Machine Learning Operations (MLOps) Zoomcamp**
+[**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)\
 ![mlops_zoomcamp](./assets/mlops_zoomcamp.png)
 
 **And other programming courses / coding projects you might be working on.**
