@@ -60,6 +60,7 @@ A team of instructors sharing free data courses with the world. **Support them!*
 
 ### **Machine Learning Operations (MLOps) Zoomcamp**
 [**Course link**](https://github.com/DataTalksClub/mlops-zoomcamp)
+
 [![mlops_zoomcamp](./assets//mlops_zoomcamp.png)](https://github.com/DataTalksClub/mlops-zoomcamp "mlops_zoomcamp")
 
 **And other programming courses / coding projects you might be working on.**
