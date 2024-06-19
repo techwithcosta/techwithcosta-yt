@@ -508,7 +508,7 @@ Here you can find all files and folders that exist within the directory you are 
 
 ### Open a file
 - Open the `README.md`, one click opens a temporary tab, two clicks open a fixed tab
-- Press `CTRL + SHIFT + P`, select `Markdown: Open Preview to the Size`
+- Press `CTRL + SHIFT + P`, select `Markdown: Open Preview to the Side`
 - You can achieve the same thing with `CTRL + K` (notice the message in the bottom tab) and then `V`
 - Now you see the markdown code on the left, and the rendered result on the right, the scroll is synchronized
 
