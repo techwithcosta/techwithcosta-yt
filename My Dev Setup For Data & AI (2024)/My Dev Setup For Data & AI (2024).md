@@ -1014,14 +1014,14 @@ terraform
 ```bash
 terraform -install-autocomplete
 ```
-- Create a directory named `learn-terraform-docker-container` for testing purposes
+- Create a directory named `test-terraform-gcp` for testing purposes
 ```bash
-mkdir learn-terraform-docker-container
+mkdir test-terraform-gcp
 ```
 - This working directory stores the configuration files that you write to describe the infrastructure you want Terraform to create and manage. When you initialize and apply the configuration here, Terraform uses this directory to store required plugins, modules (pre-written configurations), and information about the real infrastructure it created
 - Navigate into the working directory
 ```bash
-cd learn-terraform-docker-container
+cd test-terraform-gcp
 ```
 - In the working directory, create a file called `main.tf`
 ```bash
