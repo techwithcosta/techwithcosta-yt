@@ -12,6 +12,8 @@
 - A basic setup to learn about:
   - `Data` (`Engineering`, `Analysis`, `Science`)
   - `Artificial Intelligence (AI)`
+  - `Large Language Models (LLMs)`
+  - `Machine Learning (ML)`
   - `Computer Science (CS)`
   - `Software Engineering (SWE)`
   - etc.
